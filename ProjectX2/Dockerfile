@@ -17,7 +17,11 @@ RUN curl -L https://github.com/bazelbuild/bazelisk/releases/latest/download/baze
 RUN which bazel
 RUN bazel --version
 
-RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/CodeIntelligenceTesting/cifuzz/main/install.sh)"
+# The URL returns 404, probably since CIFuzz is now a commercial product
+#RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/CodeIntelligenceTesting/cifuzz/main/install.sh)"
+RUN git clone https://github.com/asadhasan73/cifuzz
+RUN cd cifuzz
+RUN make install
 
 #Provide your repository link below
 # TODO: Revoke token after task has been completed
