@@ -23,6 +23,6 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/CodeIntelligenceTestin
 # TODO: Revoke token after task has been completed
 RUN git clone https://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@github.com/juskoski/ProjectX2.git
 
-WORKDIR /ProjectX/software-and-hardware-security-submissions-2024-juskoski/Week2/
+WORKDIR /ProjectX2
 
 CMD ["sh", "-c", "cifuzz run test:test --use-sandbox=false > fuzzing.log 2>&1 && cat fuzzing.log"]
