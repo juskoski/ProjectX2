@@ -1,0 +1,10 @@
+name: ProjectX2 CI pipeline
+on: [push]
+jobs:
+  FuzzTest:
+    runs-on:
+      - self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t "projectx2" Week2/ProjectX2/
+      - run: docker run projectx2
