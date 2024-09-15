@@ -28,9 +28,9 @@ ENV PATH="/usr/local/go/bin:${PATH}"
 RUN go version
 
 # Install cifuzz
-RUN git clone https://github.com/asadhasan73/cifuzz
-RUN cd cifuzz
-RUN make install
+RUN git clone https://github.com/asadhasan73/cifuzz \
+    && cd cifuzz \
+    && make install
 
 #Provide your repository link below
 # TODO: Revoke token after task has been completed
