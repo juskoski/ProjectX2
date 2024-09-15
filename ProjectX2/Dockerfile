@@ -19,7 +19,15 @@ RUN bazel --version
 
 # The URL returns 404, probably since CIFuzz is now a commercial product
 #RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/CodeIntelligenceTesting/cifuzz/main/install.sh)"
-RUN apt-get update && apt-get install make
+RUN apt-get update && apt-get install make wget
+
+# Install go first
+RUN wget https://go.dev/dl/go1.23.1.linux-amd64.tar.gz
+RUN tar -C /usr/local -xzf go1.23.1.linux-amd64.tar.gz
+RUN export PATH=$PATH:/usr/local/go/bin
+RUN go version
+
+# Install cifuzz
 RUN git clone https://github.com/asadhasan73/cifuzz
 RUN cd cifuzz
 RUN make install
