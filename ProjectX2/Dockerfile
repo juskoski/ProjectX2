@@ -5,7 +5,7 @@ FROM ubuntu:latest
 WORKDIR /ProjectX
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends python3 git curl clang llvm lcov default-jdk zip build-essentials && \
+    apt-get install -y --no-install-recommends python3 git curl clang llvm lcov default-jdk zip make && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
