@@ -19,7 +19,7 @@ RUN bazel --version
 
 # The URL returns 404, probably since CIFuzz is now a commercial product
 #RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/CodeIntelligenceTesting/cifuzz/main/install.sh)"
-RUN apt-get update && apt-get install make wget clang llvm lcov python jdk-openjdk zip
+RUN apt-get update && apt-get install make wget clang llvm lcov jdk-openjdk zip
 
 # Install go first
 RUN wget https://go.dev/dl/go1.23.1.linux-amd64.tar.gz
