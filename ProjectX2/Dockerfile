@@ -21,7 +21,7 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/CodeIntelligenceTestin
 
 #Provide your repository link below
 # TODO: Revoke token after task has been completed
-RUN git clone https://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@github.com/shs-2024/software-and-hardware-security-submissions-2024-juskoski
+RUN git clone https://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@github.com:juskoski/ProjectX2.git
 
 WORKDIR /ProjectX/software-and-hardware-security-submissions-2024-juskoski/Week2/
 
