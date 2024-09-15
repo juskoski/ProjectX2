@@ -5,7 +5,7 @@ FROM ubuntu:latest
 WORKDIR /ProjectX
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends python3 git curl clang llvm lcov default-jdk zip make && \
+    apt-get install -y --no-install-recommends python3 git curl clang llvm lcov default-jdk zip && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -19,6 +19,7 @@ RUN bazel --version
 
 # The URL returns 404, probably since CIFuzz is now a commercial product
 #RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/CodeIntelligenceTesting/cifuzz/main/install.sh)"
+RUN apt-get update && apt-get install make
 RUN git clone https://github.com/asadhasan73/cifuzz
 RUN cd cifuzz
 RUN make install
