@@ -42,4 +42,4 @@ RUN git clone https://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@github.com/juskos
 
 WORKDIR /ProjectX/ProjectX2/ProjectX2
 
-CMD ["sh", "-c", "cifuzz run test:test --use-sandbox=false > fuzzing.log 2>&1 && cat fuzzing.log"]
+CMD ["sh", "-c", "cifuzz run test:test --use-sandbox=false > fuzzing.log 2>&1 && cat fuzzing.log"] 
