@@ -1,5 +1,8 @@
 name: ProjectX2 CI pipeline
-on: [push]
+on:
+  pull_request:
+    branches:
+      - main
 jobs:
   FuzzTest:
     runs-on:
