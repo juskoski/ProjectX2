@@ -36,9 +36,8 @@ RUN git clone https://github.com/asadhasan73/cifuzz \
 RUN apt-get install -y python3-pip
 RUN apt-get install python3-setuptools
 
-#Provide your repository link below
-# TODO: Revoke token after task has been completed
-RUN git clone https://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@github.com/juskoski/ProjectX2.git
+# Provide your repository link below
+RUN git clone https://[<Access token>]@github.com/juskoski/ProjectX2.git
 
 WORKDIR /ProjectX/ProjectX2/ProjectX2
 
