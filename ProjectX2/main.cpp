@@ -52,7 +52,7 @@ int main() {
     printf("Integer underflow OK");
 
     // Unexpected operator
-    result = calculator(10.0, 'f', 10.0);
+    result = calculator(10.0, 'f', 11.0);
     assert(result == 1.0); // Expected value for invalid operator
     printf("Unexpected operator OK");
 
