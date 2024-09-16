@@ -32,6 +32,10 @@ RUN git clone https://github.com/asadhasan73/cifuzz \
     && cd cifuzz \
     && make install
 
+# Install setuptools
+RUN apt-get install -y python3-pip
+RUN pip3 install setuptools
+
 #Provide your repository link below
 # TODO: Revoke token after task has been completed
 RUN git clone https://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@github.com/juskoski/ProjectX2.git
