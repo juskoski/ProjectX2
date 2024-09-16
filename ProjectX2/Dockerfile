@@ -1,5 +1,5 @@
 # Use a base image with Ubuntu, which is similar to the CI environment
-FROM ubuntu:latest
+FROM ubuntu:22.04
 
 #Default directory
 WORKDIR /ProjectX
